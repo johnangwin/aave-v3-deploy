@@ -151,7 +151,7 @@ describe("Ethereum V3 - Token-less deployment: Governance and user actions", fun
       await waitForTx(
         await aaveOracle.setAssetSources(
           [payload.asset],
-          ["0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419"]
+          ["0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419"] // Chainlink ETH-USD price aggregator in Eth Mainnet
         )
       );
       // Unpause
