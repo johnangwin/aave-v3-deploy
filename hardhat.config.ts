@@ -14,6 +14,7 @@ import {
   eHarmonyNetwork,
   eOptimismNetwork,
   ePolygonNetwork,
+  eLearningNetwork,
   eTenderly,
 } from "./helpers/types";
 import { DEFAULT_NAMED_ACCOUNTS } from "./helpers/constants";
@@ -77,6 +78,10 @@ export default {
     [ePolygonNetwork.mumbai]: getCommonNetworkConfig(
       ePolygonNetwork.mumbai,
       80001
+    ),
+    [eLearningNetwork.learning]: getCommonNetworkConfig(
+      eLearningNetwork.learning,
+      138
     ),
     arbitrum: getCommonNetworkConfig(eArbitrumNetwork.arbitrum, 42161),
     [eArbitrumNetwork.arbitrumTestnet]: getCommonNetworkConfig(

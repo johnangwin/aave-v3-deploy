@@ -6,6 +6,7 @@ import {
   eEthereumNetwork,
   eNetwork,
   ePolygonNetwork,
+  eLearningNetwork,
   eArbitrumNetwork,
   eHarmonyNetwork,
   eAvalancheNetwork,
@@ -67,6 +68,7 @@ export const NETWORKS_RPC_URL: iParamsPerNetwork<string> = {
   [ePolygonNetwork.polygon]: `https://polygon-mainnet.g.alchemy.com/v2/${getAlchemyKey(
     ePolygonNetwork.polygon
   )}`,
+  [eLearningNetwork.learning]: "http://localhost:8545",
   [eArbitrumNetwork.arbitrum]: `https://arb1.arbitrum.io/rpc`,
   [eArbitrumNetwork.arbitrumTestnet]: `https://rinkeby.arbitrum.io/rpc`,
   [eEthereumNetwork.rinkeby]: `https://eth-rinkeby.alchemyapi.io/v2/${getAlchemyKey(
@@ -96,6 +98,7 @@ export const NETWORKS_RPC_URL: iParamsPerNetwork<string> = {
 export const LIVE_NETWORKS: iParamsPerNetwork<boolean> = {
   [eEthereumNetwork.main]: true,
   [ePolygonNetwork.polygon]: true,
+  [eLearningNetwork.learning]: true,
   [eArbitrumNetwork.arbitrum]: true,
   [eHarmonyNetwork.main]: true,
   [eAvalancheNetwork.avalanche]: true,

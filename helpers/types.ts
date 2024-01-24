@@ -11,6 +11,7 @@ export enum eTenderly {
 export type eNetwork =
   | eEthereumNetwork
   | ePolygonNetwork
+  | eLearningNetwork
   | eXDaiNetwork
   | eAvalancheNetwork
   | eArbitrumNetwork
@@ -47,6 +48,10 @@ export enum eEthereumNetwork {
 export enum ePolygonNetwork {
   polygon = "polygon",
   mumbai = "mumbai",
+}
+
+export enum eLearningNetwork {
+  learning = "learning"
 }
 
 export enum eXDaiNetwork {
@@ -433,6 +438,7 @@ export type iParamsPerNetworkWithDefault<T> = {
 export interface iParamsPerNetworkAll<T>
   extends iEthereumParamsPerNetwork<T>,
     iPolygonParamsPerNetwork<T>,
+    iLearningParamsPerNetwork<T>,
     iXDaiParamsPerNetwork<T> {}
 
 export interface iEthereumParamsPerNetwork<T> {
@@ -445,6 +451,10 @@ export interface iEthereumParamsPerNetwork<T> {
 export interface iPolygonParamsPerNetwork<T> {
   [ePolygonNetwork.polygon]: T;
   [ePolygonNetwork.mumbai]: T;
+}
+
+export interface iLearningParamsPerNetwork<T> {
+  [eLearningNetwork.learning]: T;
 }
 
 export interface iXDaiParamsPerNetwork<T> {
